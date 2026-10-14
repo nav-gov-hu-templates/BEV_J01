@@ -1,0 +1,2747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:baseForm="https://soap.api.nav.gov.hu/definitions/model/2.0/baseForm/1.0"
+        xmlns:enm1="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_iranyitoszam"
+        xmlns:enm3="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_adonemkod"
+        xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/BEV_J01/20.10"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/BEV_J01/20.10">
+   <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+           schemaLocation="form_xsd_metaschema.xsd"/>
+   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/baseForm/1.0"
+           schemaLocation="baseForm.xsd"/>
+   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_iranyitoszam"
+           schemaLocation="altalanos_iranyitoszam.xsd"/>
+   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_adonemkod"
+           schemaLocation="altalanos_adonemkod.xsd"/>
+   <element name="Doc_BEV_J01"
+            type="tns:Doc_BEV_J01_Type"
+            meta:metaType="DocMetaType">
+      <annotation>
+         <documentation>Bevallás a dohánygyártmányok után fizetendő, illetve visszaigényelhető jövedéki adó és általános forgalmi adó összegéről, valamint az önellenőrzéssel történő helyesbítésről</documentation>
+      </annotation>
+      <xs:unique name="uniqueFileId_Attachment_1">
+         <xs:selector xpath="Form_BEV_J01/Attachment_1"/>
+         <xs:field xpath="fileId"/>
+      </xs:unique>
+   </element>
+   <complexType name="Doc_BEV_J01_Type">
+      <annotation>
+         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
+      </annotation>
+      <sequence>
+         <element name="Form_BEV_J01"
+                  type="tns:Form_BEV_J01_Type"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>BEV_J01 részbizonylat</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <simpleType name="Enum_BEV_J01_0A0001E0001UA">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="utca">
+            <annotation>
+               <documentation>utca=148</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="út">
+            <annotation>
+               <documentation>út=150</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tér">
+            <annotation>
+               <documentation>tér=143</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="köz">
+            <annotation>
+               <documentation>köz=78</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="postafiók">
+            <annotation>
+               <documentation>postafiók=1</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna">
+            <annotation>
+               <documentation>akna=2</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna-alsó">
+            <annotation>
+               <documentation>akna-alsó=3</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna-felső">
+            <annotation>
+               <documentation>akna-felső=4</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="alagút">
+            <annotation>
+               <documentation>alagút=5</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="alsórakpart">
+            <annotation>
+               <documentation>alsórakpart=6</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="arborétum">
+            <annotation>
+               <documentation>arborétum=7</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="autópálya">
+            <annotation>
+               <documentation>autópálya=175</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="autóút">
+            <annotation>
+               <documentation>autóút=8</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="állat- és növ.kert">
+            <annotation>
+               <documentation>állat- és növ.kert=9</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="állomás">
+            <annotation>
+               <documentation>állomás=10</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="árnyék">
+            <annotation>
+               <documentation>árnyék=11</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="árok">
+            <annotation>
+               <documentation>árok=12</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="átjáró">
+            <annotation>
+               <documentation>átjáró=13</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="barakképület">
+            <annotation>
+               <documentation>barakképület=14</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="barlang">
+            <annotation>
+               <documentation>barlang=15</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bánya">
+            <annotation>
+               <documentation>bánya=16</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bányatelep">
+            <annotation>
+               <documentation>bányatelep=17</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bástya">
+            <annotation>
+               <documentation>bástya=18</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bástyája">
+            <annotation>
+               <documentation>bástyája=19</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bejáró">
+            <annotation>
+               <documentation>bejáró=20</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bekötőút">
+            <annotation>
+               <documentation>bekötőút=21</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="csárda">
+            <annotation>
+               <documentation>csárda=22</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="csónakházak">
+            <annotation>
+               <documentation>csónakházak=23</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="domb">
+            <annotation>
+               <documentation>domb=24</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlő">
+            <annotation>
+               <documentation>dűlő=25</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlősor">
+            <annotation>
+               <documentation>dűlősor=26</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlőterület">
+            <annotation>
+               <documentation>dűlőterület=27</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlőút">
+            <annotation>
+               <documentation>dűlőút=28</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="egyetemváros">
+            <annotation>
+               <documentation>egyetemváros=29</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="egyéb">
+            <annotation>
+               <documentation>egyéb=30</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="elágazás">
+            <annotation>
+               <documentation>elágazás=31</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="emlékút">
+            <annotation>
+               <documentation>emlékút=32</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdészház">
+            <annotation>
+               <documentation>erdészház=33</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdészlak">
+            <annotation>
+               <documentation>erdészlak=34</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdő">
+            <annotation>
+               <documentation>erdő=35</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdősor">
+            <annotation>
+               <documentation>erdősor=36</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="fasor">
+            <annotation>
+               <documentation>fasor=37</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="fasora">
+            <annotation>
+               <documentation>fasora=38</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="felső">
+            <annotation>
+               <documentation>felső=39</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="forduló">
+            <annotation>
+               <documentation>forduló=40</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="föld">
+            <annotation>
+               <documentation>föld=41</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főmérnökség">
+            <annotation>
+               <documentation>főmérnökség=42</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főtér">
+            <annotation>
+               <documentation>főtér=43</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főút">
+            <annotation>
+               <documentation>főút=44</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gát">
+            <annotation>
+               <documentation>gát=45</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gátőrház">
+            <annotation>
+               <documentation>gátőrház=46</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gátsor">
+            <annotation>
+               <documentation>gátsor=47</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyár">
+            <annotation>
+               <documentation>gyár=48</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyártelep">
+            <annotation>
+               <documentation>gyártelep=49</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyárváros">
+            <annotation>
+               <documentation>gyárváros=50</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyümölcsös">
+            <annotation>
+               <documentation>gyümölcsös=51</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hajóállomás">
+            <annotation>
+               <documentation>hajóállomás=176</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="határsor">
+            <annotation>
+               <documentation>határsor=52</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="határút">
+            <annotation>
+               <documentation>határút=53</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="ház">
+            <annotation>
+               <documentation>ház=54</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegy">
+            <annotation>
+               <documentation>hegy=55</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhát">
+            <annotation>
+               <documentation>hegyhát=56</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhátdűlő">
+            <annotation>
+               <documentation>hegyhátdűlő=57</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhátköz">
+            <annotation>
+               <documentation>hegyhátköz=58</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hídfő">
+            <annotation>
+               <documentation>hídfő=59</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hrsz.">
+            <annotation>
+               <documentation>hrsz.=61</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="iskola">
+            <annotation>
+               <documentation>iskola=60</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="játszótér">
+            <annotation>
+               <documentation>játszótér=62</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kapu">
+            <annotation>
+               <documentation>kapu=63</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kastély">
+            <annotation>
+               <documentation>kastély=64</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kert">
+            <annotation>
+               <documentation>kert=65</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kertsor">
+            <annotation>
+               <documentation>kertsor=66</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kilátó">
+            <annotation>
+               <documentation>kilátó=67</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kioszk">
+            <annotation>
+               <documentation>kioszk=68</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kocsiszín">
+            <annotation>
+               <documentation>kocsiszín=69</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kolónia">
+            <annotation>
+               <documentation>kolónia=70</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="korzó">
+            <annotation>
+               <documentation>korzó=71</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kör">
+            <annotation>
+               <documentation>kör=72</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körönd">
+            <annotation>
+               <documentation>körönd=73</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körtér">
+            <annotation>
+               <documentation>körtér=74</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körút">
+            <annotation>
+               <documentation>körút=75</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körvasútsor">
+            <annotation>
+               <documentation>körvasútsor=76</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körzet">
+            <annotation>
+               <documentation>körzet=77</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kultúrpark">
+            <annotation>
+               <documentation>kultúrpark=79</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kunyhó">
+            <annotation>
+               <documentation>kunyhó=80</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kút">
+            <annotation>
+               <documentation>kút=81</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kültelek">
+            <annotation>
+               <documentation>kültelek=82</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakóház">
+            <annotation>
+               <documentation>lakóház=83</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakónegyed">
+            <annotation>
+               <documentation>lakónegyed=84</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakópark">
+            <annotation>
+               <documentation>lakópark=177</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakótelep">
+            <annotation>
+               <documentation>lakótelep=85</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lejáró">
+            <annotation>
+               <documentation>lejáró=86</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lejtő">
+            <annotation>
+               <documentation>lejtő=87</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lépcső">
+            <annotation>
+               <documentation>lépcső=88</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="liget">
+            <annotation>
+               <documentation>liget=89</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="major">
+            <annotation>
+               <documentation>major=90</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="malom">
+            <annotation>
+               <documentation>malom=91</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="menedékház">
+            <annotation>
+               <documentation>menedékház=92</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="mélyút">
+            <annotation>
+               <documentation>mélyút=93</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="munkásszálló">
+            <annotation>
+               <documentation>munkásszálló=94</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="műút">
+            <annotation>
+               <documentation>műút=95</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="oldal">
+            <annotation>
+               <documentation>oldal=96</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="orom">
+            <annotation>
+               <documentation>orom=97</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrház">
+            <annotation>
+               <documentation>őrház=98</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrházak">
+            <annotation>
+               <documentation>őrházak=99</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrházlak">
+            <annotation>
+               <documentation>őrházlak=100</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="park">
+            <annotation>
+               <documentation>park=101</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="parkja">
+            <annotation>
+               <documentation>parkja=102</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="part">
+            <annotation>
+               <documentation>part=103</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pálya">
+            <annotation>
+               <documentation>pálya=104</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pályaudvar">
+            <annotation>
+               <documentation>pályaudvar=105</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="piac">
+            <annotation>
+               <documentation>piac=106</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pihenő">
+            <annotation>
+               <documentation>pihenő=107</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pince">
+            <annotation>
+               <documentation>pince=108</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pincesor">
+            <annotation>
+               <documentation>pincesor=109</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="puszta">
+            <annotation>
+               <documentation>puszta=110</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rakpart">
+            <annotation>
+               <documentation>rakpart=111</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="repülőtér">
+            <annotation>
+               <documentation>repülőtér=112</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rész">
+            <annotation>
+               <documentation>rész=113</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rét">
+            <annotation>
+               <documentation>rét=114</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sarok">
+            <annotation>
+               <documentation>sarok=115</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sánc">
+            <annotation>
+               <documentation>sánc=116</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sávház">
+            <annotation>
+               <documentation>sávház=117</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sétány">
+            <annotation>
+               <documentation>sétány=118</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sor">
+            <annotation>
+               <documentation>sor=119</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sora">
+            <annotation>
+               <documentation>sora=120</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sportpálya">
+            <annotation>
+               <documentation>sportpálya=121</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sporttelep">
+            <annotation>
+               <documentation>sporttelep=122</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="stadion">
+            <annotation>
+               <documentation>stadion=123</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="strandfürdő">
+            <annotation>
+               <documentation>strandfürdő=124</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sugárút">
+            <annotation>
+               <documentation>sugárút=125</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szállás">
+            <annotation>
+               <documentation>szállás=126</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szállások">
+            <annotation>
+               <documentation>szállások=127</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szer">
+            <annotation>
+               <documentation>szer=128</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szél">
+            <annotation>
+               <documentation>szél=129</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sziget">
+            <annotation>
+               <documentation>sziget=130</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szivattyútelep">
+            <annotation>
+               <documentation>szivattyútelep=131</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlő">
+            <annotation>
+               <documentation>szőlő=132</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlőhegy">
+            <annotation>
+               <documentation>szőlőhegy=133</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlők">
+            <annotation>
+               <documentation>szőlők=134</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tag">
+            <annotation>
+               <documentation>tag=135</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tanya">
+            <annotation>
+               <documentation>tanya=136</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tanyák">
+            <annotation>
+               <documentation>tanyák=137</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="telep">
+            <annotation>
+               <documentation>telep=138</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="temető">
+            <annotation>
+               <documentation>temető=139</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tere">
+            <annotation>
+               <documentation>tere=140</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tető">
+            <annotation>
+               <documentation>tető=141</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="télikikötő">
+            <annotation>
+               <documentation>télikikötő=142</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tömb">
+            <annotation>
+               <documentation>tömb=144</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="turistaház">
+            <annotation>
+               <documentation>turistaház=145</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="udvar">
+            <annotation>
+               <documentation>udvar=146</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utak">
+            <annotation>
+               <documentation>utak=147</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utcája">
+            <annotation>
+               <documentation>utcája=149</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="útja">
+            <annotation>
+               <documentation>útja=151</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="útőrház">
+            <annotation>
+               <documentation>útőrház=152</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő">
+            <annotation>
+               <documentation>üdülő=153</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-part">
+            <annotation>
+               <documentation>üdülő-part=154</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-sor">
+            <annotation>
+               <documentation>üdülő-sor=155</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-telep">
+            <annotation>
+               <documentation>üdülő-telep=156</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vadaskert">
+            <annotation>
+               <documentation>vadaskert=157</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vadászház">
+            <annotation>
+               <documentation>vadászház=158</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútállomás">
+            <annotation>
+               <documentation>vasútállomás=159</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútimegálló">
+            <annotation>
+               <documentation>vasútimegálló=160</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútiőrház">
+            <annotation>
+               <documentation>vasútiőrház=161</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútsor">
+            <annotation>
+               <documentation>vasútsor=162</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vágóhíd">
+            <annotation>
+               <documentation>vágóhíd=163</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vár">
+            <annotation>
+               <documentation>vár=164</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="várkerület">
+            <annotation>
+               <documentation>várkerület=178</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="várköz">
+            <annotation>
+               <documentation>várköz=165</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="város">
+            <annotation>
+               <documentation>város=166</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vezetőút">
+            <annotation>
+               <documentation>vezetőút=167</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="villasor">
+            <annotation>
+               <documentation>villasor=168</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vitorláskikötő">
+            <annotation>
+               <documentation>vitorláskikötő=179</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vízmű">
+            <annotation>
+               <documentation>vízmű=169</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="völgy">
+            <annotation>
+               <documentation>völgy=170</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="zsilip">
+            <annotation>
+               <documentation>zsilip=171</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="zug">
+            <annotation>
+               <documentation>zug=172</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="u.">
+            <annotation>
+               <documentation>u.=174</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="u">
+            <annotation>
+               <documentation>u=173</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_BEV_J01_0A0001F500A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="H">
+            <annotation>
+               <documentation>H=adózói javítás (helyesbítés)</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="O">
+            <annotation>
+               <documentation>O=önellenőrzés</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="I">
+            <annotation>
+               <documentation>I=Ismételt önellenőrzés</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_BEV_J01_0C0001B006A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="31">
+            <annotation>
+               <documentation>31=Jöt. 12. § a) Exportáló személy</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="32">
+            <annotation>
+               <documentation>32=Jöt. 12. § b) Adóraktár engedélyese</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="34">
+            <annotation>
+               <documentation>34=Jöt. 12. § d) EKO szerinti szállító</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="35">
+            <annotation>
+               <documentation>35=Jöt. 12. § e) Csomagküldő kereskedő</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="36">
+            <annotation>
+               <documentation>36=Jöt. 12. § f) EKO szerinti szállító és a csomagküldő kereskedő</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="37">
+            <annotation>
+               <documentation>37=Jöt. 12. § g) Mentesülést eredményező tevékenységhez felhasználó személy</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="38">
+            <annotation>
+               <documentation>38=Jöt. 12. § h) Adóraktár engedélyese</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="42">
+            <annotation>
+               <documentation>42=Jöt. 13. § (3) bek. NATO, valamint a szerződésben részes más állam fegyveres ereje, polgári állománya</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="43">
+            <annotation>
+               <documentation>43=Jöt. 77. § (3) bek. a) Adóraktár engedélyese, a bejegyzett kereskedő, importáló</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="44">
+            <annotation>
+               <documentation>44=Jöt. 77. § (3) bek. b) Adóraktár</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="55">
+            <annotation>
+               <documentation>55=Jöt. 13. § (6) bek. NATO, valamint a szerződésben részes más állam fegyveres ereje, polgári állománya</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="57">
+            <annotation>
+               <documentation>57=Jöt. 77. § (5) bekezdés Adóraktár</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="58">
+            <annotation>
+               <documentation>58=Jöt. 12. § d) Adóraktár engedélyes, jövedéki engedélyes kereskedő, bejegyzett feladó, eseti igazolt feladó</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="59">
+            <annotation>
+               <documentation>59=Jöt. 12. § f) Adóraktár engedélyes, jövedéki engedélyes kereskedő, bejegyzett feladó, eseti igazolt feladó, csomagküldő kereskedő</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_BEV_J01_0D0001C001A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="215">
+            <annotation>
+               <documentation>215=10032000-01076301</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="946">
+            <annotation>
+               <documentation>946=10032000-01037344</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="947">
+            <annotation>
+               <documentation>947=10032000-01037351</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_BEV_J01_0EXXXXB001A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="1315">
+            <annotation>
+               <documentation>1315=NGM rendelet 64. § (1) bek. Kiléptetésről kiállított igazolás, NATO vámokmány, Egységes Vámokmány, megsemmisítésről, érvénytelenítésről felvett jegyzőkönyv</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="1416">
+            <annotation>
+               <documentation>1416=NGM rendelet 65. § Jegyzőkönyvek, felhasználást igazoló számviteli bizonylat</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="1522">
+            <annotation>
+               <documentation>1522=NGM rendelet 66. §Jegyzőkönyvek, felhasználást igazoló számviteli bizonylat</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="1720">
+            <annotation>
+               <documentation>1720=NGM rendelet 69. § (1) bek. Felhasználást igazoló okmány</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="1821">
+            <annotation>
+               <documentation>1821=NGM rendelet 70. §Visszavásárlásról kiállított bizonylat</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="1918">
+            <annotation>
+               <documentation>1918=Jöt 12. § d) pont EKO, tagállami igazolás</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2019">
+            <annotation>
+               <documentation>2019=Jöt 12. § e) f) Tagállami igazolás</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2119">
+            <annotation>
+               <documentation>2119=Jöt. 12. § d) pont e-EKO átvételi elismervény/tagállami igazolás</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_BEV_J01_egyseges_orszagkodok_1">
+      <annotation>
+         <documentation>Enum értékek egyseges_orszagkodok mátrix 1. oszlopból.</documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="AD"/>
+         <enumeration value="AE"/>
+         <enumeration value="AF"/>
+         <enumeration value="AG"/>
+         <enumeration value="AI"/>
+         <enumeration value="AL"/>
+         <enumeration value="AM"/>
+         <enumeration value="AO"/>
+         <enumeration value="AQ"/>
+         <enumeration value="AR"/>
+         <enumeration value="AS"/>
+         <enumeration value="AT"/>
+         <enumeration value="AU"/>
+         <enumeration value="AW"/>
+         <enumeration value="AX"/>
+         <enumeration value="AZ"/>
+         <enumeration value="BA"/>
+         <enumeration value="BB"/>
+         <enumeration value="BD"/>
+         <enumeration value="BE"/>
+         <enumeration value="BF"/>
+         <enumeration value="BG"/>
+         <enumeration value="BH"/>
+         <enumeration value="BI"/>
+         <enumeration value="BJ"/>
+         <enumeration value="BL"/>
+         <enumeration value="BM"/>
+         <enumeration value="BN"/>
+         <enumeration value="BO"/>
+         <enumeration value="BQ"/>
+         <enumeration value="BR"/>
+         <enumeration value="BS"/>
+         <enumeration value="BT"/>
+         <enumeration value="BV"/>
+         <enumeration value="BW"/>
+         <enumeration value="BY"/>
+         <enumeration value="BZ"/>
+         <enumeration value="CA"/>
+         <enumeration value="CC"/>
+         <enumeration value="CD"/>
+         <enumeration value="CF"/>
+         <enumeration value="CG"/>
+         <enumeration value="CH"/>
+         <enumeration value="CI"/>
+         <enumeration value="CK"/>
+         <enumeration value="CL"/>
+         <enumeration value="CM"/>
+         <enumeration value="CN"/>
+         <enumeration value="CO"/>
+         <enumeration value="CR"/>
+         <enumeration value="CU"/>
+         <enumeration value="CV"/>
+         <enumeration value="CW"/>
+         <enumeration value="CX"/>
+         <enumeration value="CY"/>
+         <enumeration value="CZ"/>
+         <enumeration value="DE"/>
+         <enumeration value="DJ"/>
+         <enumeration value="DK"/>
+         <enumeration value="DM"/>
+         <enumeration value="DO"/>
+         <enumeration value="DZ"/>
+         <enumeration value="EC"/>
+         <enumeration value="EE"/>
+         <enumeration value="EG"/>
+         <enumeration value="EH"/>
+         <enumeration value="ER"/>
+         <enumeration value="ES"/>
+         <enumeration value="ET"/>
+         <enumeration value="FI"/>
+         <enumeration value="FJ"/>
+         <enumeration value="FK"/>
+         <enumeration value="FM"/>
+         <enumeration value="FO"/>
+         <enumeration value="FR"/>
+         <enumeration value="FX"/>
+         <enumeration value="GA"/>
+         <enumeration value="GB"/>
+         <enumeration value="GD"/>
+         <enumeration value="GE"/>
+         <enumeration value="GF"/>
+         <enumeration value="GG"/>
+         <enumeration value="GH"/>
+         <enumeration value="GI"/>
+         <enumeration value="GL"/>
+         <enumeration value="GM"/>
+         <enumeration value="GN"/>
+         <enumeration value="GP"/>
+         <enumeration value="GQ"/>
+         <enumeration value="GR"/>
+         <enumeration value="GS"/>
+         <enumeration value="GT"/>
+         <enumeration value="GU"/>
+         <enumeration value="GW"/>
+         <enumeration value="GY"/>
+         <enumeration value="HK"/>
+         <enumeration value="HM"/>
+         <enumeration value="HN"/>
+         <enumeration value="HR"/>
+         <enumeration value="HT"/>
+         <enumeration value="HU"/>
+         <enumeration value="ID"/>
+         <enumeration value="IE"/>
+         <enumeration value="IL"/>
+         <enumeration value="IM"/>
+         <enumeration value="IN"/>
+         <enumeration value="IO"/>
+         <enumeration value="IQ"/>
+         <enumeration value="IR"/>
+         <enumeration value="IS"/>
+         <enumeration value="IT"/>
+         <enumeration value="JE"/>
+         <enumeration value="JM"/>
+         <enumeration value="JO"/>
+         <enumeration value="JP"/>
+         <enumeration value="KE"/>
+         <enumeration value="KG"/>
+         <enumeration value="KH"/>
+         <enumeration value="KI"/>
+         <enumeration value="KM"/>
+         <enumeration value="KN"/>
+         <enumeration value="KP"/>
+         <enumeration value="KR"/>
+         <enumeration value="KW"/>
+         <enumeration value="KY"/>
+         <enumeration value="KZ"/>
+         <enumeration value="LA"/>
+         <enumeration value="LB"/>
+         <enumeration value="LC"/>
+         <enumeration value="LI"/>
+         <enumeration value="LK"/>
+         <enumeration value="LR"/>
+         <enumeration value="LS"/>
+         <enumeration value="LT"/>
+         <enumeration value="LU"/>
+         <enumeration value="LV"/>
+         <enumeration value="LY"/>
+         <enumeration value="MA"/>
+         <enumeration value="MC"/>
+         <enumeration value="MD"/>
+         <enumeration value="ME"/>
+         <enumeration value="MF"/>
+         <enumeration value="MG"/>
+         <enumeration value="MH"/>
+         <enumeration value="MK"/>
+         <enumeration value="ML"/>
+         <enumeration value="MM"/>
+         <enumeration value="MN"/>
+         <enumeration value="MO"/>
+         <enumeration value="MP"/>
+         <enumeration value="MQ"/>
+         <enumeration value="MR"/>
+         <enumeration value="MS"/>
+         <enumeration value="MT"/>
+         <enumeration value="MU"/>
+         <enumeration value="MV"/>
+         <enumeration value="MW"/>
+         <enumeration value="MX"/>
+         <enumeration value="MY"/>
+         <enumeration value="MZ"/>
+         <enumeration value="NA"/>
+         <enumeration value="NC"/>
+         <enumeration value="NE"/>
+         <enumeration value="NF"/>
+         <enumeration value="NG"/>
+         <enumeration value="NI"/>
+         <enumeration value="NL"/>
+         <enumeration value="NO"/>
+         <enumeration value="NP"/>
+         <enumeration value="NR"/>
+         <enumeration value="NU"/>
+         <enumeration value="NZ"/>
+         <enumeration value="OM"/>
+         <enumeration value="PA"/>
+         <enumeration value="PE"/>
+         <enumeration value="PF"/>
+         <enumeration value="PG"/>
+         <enumeration value="PH"/>
+         <enumeration value="PK"/>
+         <enumeration value="PL"/>
+         <enumeration value="PM"/>
+         <enumeration value="PN"/>
+         <enumeration value="PR"/>
+         <enumeration value="PS"/>
+         <enumeration value="PT"/>
+         <enumeration value="PW"/>
+         <enumeration value="PY"/>
+         <enumeration value="QA"/>
+         <enumeration value="RE"/>
+         <enumeration value="RO"/>
+         <enumeration value="RS"/>
+         <enumeration value="RU"/>
+         <enumeration value="RW"/>
+         <enumeration value="SA"/>
+         <enumeration value="SB"/>
+         <enumeration value="SC"/>
+         <enumeration value="SD"/>
+         <enumeration value="SE"/>
+         <enumeration value="SG"/>
+         <enumeration value="SH"/>
+         <enumeration value="SI"/>
+         <enumeration value="SJ"/>
+         <enumeration value="SK"/>
+         <enumeration value="SL"/>
+         <enumeration value="SM"/>
+         <enumeration value="SN"/>
+         <enumeration value="SO"/>
+         <enumeration value="SR"/>
+         <enumeration value="SS"/>
+         <enumeration value="ST"/>
+         <enumeration value="SV"/>
+         <enumeration value="SX"/>
+         <enumeration value="SY"/>
+         <enumeration value="SZ"/>
+         <enumeration value="TC"/>
+         <enumeration value="TD"/>
+         <enumeration value="TF"/>
+         <enumeration value="TG"/>
+         <enumeration value="TH"/>
+         <enumeration value="TJ"/>
+         <enumeration value="TK"/>
+         <enumeration value="TL"/>
+         <enumeration value="TM"/>
+         <enumeration value="TN"/>
+         <enumeration value="TO"/>
+         <enumeration value="TR"/>
+         <enumeration value="TT"/>
+         <enumeration value="TV"/>
+         <enumeration value="TW"/>
+         <enumeration value="TZ"/>
+         <enumeration value="UA"/>
+         <enumeration value="UG"/>
+         <enumeration value="UM"/>
+         <enumeration value="US"/>
+         <enumeration value="UY"/>
+         <enumeration value="UZ"/>
+         <enumeration value="VA"/>
+         <enumeration value="VC"/>
+         <enumeration value="VE"/>
+         <enumeration value="VG"/>
+         <enumeration value="VI"/>
+         <enumeration value="VN"/>
+         <enumeration value="VU"/>
+         <enumeration value="W1"/>
+         <enumeration value="WF"/>
+         <enumeration value="WS"/>
+         <enumeration value="XK"/>
+         <enumeration value="YE"/>
+         <enumeration value="YT"/>
+         <enumeration value="ZA"/>
+         <enumeration value="ZM"/>
+         <enumeration value="ZW"/>
+      </restriction>
+   </simpleType>
+   <complexType name="Form_BEV_J01_Type">
+      <annotation>
+         <documentation>A teljes nyomtatvány BEV_J01 részbiztonylatának szerkezetét leíró típus.</documentation>
+      </annotation>
+      <sequence>
+         <element name="Block_120200"
+                  type="tns:Block_BEV_J01_120200_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Azonosító adatok</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120009"
+                  type="tns:Block_BEV_J01_120009_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Adózói nyilatkozatok</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120015"
+                  type="tns:Block_BEV_J01_120015_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Tárgyidőszakban megállapított adó</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120052"
+                  type="tns:Block_BEV_J01_120052_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Tárgyidőszakban visszaigényelt (levont) adó</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120189"
+                  type="tns:Block_BEV_J01_120189_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Fizetendő vagy visszaigényelhető adó</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120100"
+                  type="tns:Block_BEV_J01_120100_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Átvezetési és/vagy részleges kiutalási kérelem</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120127"
+                  type="tns:Block_BEV_J01_120127_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Adóbevallást igazoló okmány adatok</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120195"
+                  type="tns:Block_BEV_J01_120195_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Önellenőrzés</documentation>
+            </annotation>
+         </element>
+         <element name="Attachment_1"
+                  type="baseForm:AttachmentType"
+                  minOccurs="0"
+                  maxOccurs="unbounded"
+                  meta:metaType="AttachmentMetaType">
+            <annotation>
+               <documentation>Csatolmány; File Extensions:*</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Block_BEV_J01_120200_Type">
+      <annotation>
+         <documentation>Azonosító adatok</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120199"
+                  type="tns:FieldGroup_BEV_J01_120199_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Kötelező adatok</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120005"
+                  type="tns:FieldGroup_BEV_J01_120005_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Ügyintéző adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120008"
+                  type="tns:FieldGroup_BEV_J01_120008_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Bevallás azonosítása</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120009_Type">
+      <annotation>
+         <documentation>Adózói nyilatkozatok</documentation>
+      </annotation>
+      <all>
+         <element name="Block_120010"
+                  type="tns:Block_BEV_J01_120010_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Belföldi pénzforgalmi vagy fizetési számlaszám</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120011"
+                  type="tns:Block_BEV_J01_120011_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Jövedéki adóval, illetőleg a kiutalással kapcsolatos nyilatkozatok</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120010_Type">
+      <annotation>
+         <documentation>Belföldi pénzforgalmi vagy fizetési számlaszám</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120012"
+                  type="tns:FieldGroup_BEV_J01_120012_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Belföldi pénzforgalmi vagy fizetési számlaszám</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120011_Type">
+      <annotation>
+         <documentation>Jövedéki adóval, illetőleg a kiutalással kapcsolatos nyilatkozatok</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120013"
+                  type="tns:FieldGroup_BEV_J01_120013_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Jövedéki adóval kapcsolatos nyilatkozatok</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120014"
+                  type="tns:FieldGroup_BEV_J01_120014_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Kiutalással kapcsolatos nyilatkozatok</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120015_Type">
+      <annotation>
+         <documentation>Tárgyidőszakban megállapított adó</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120017"
+                  type="tns:Chain_BEV_J01_120017_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Tárgyidőszakban megállapított adó</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120052_Type">
+      <annotation>
+         <documentation>Tárgyidőszakban visszaigényelt (levont) adó</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120054"
+                  type="tns:Chain_BEV_J01_120054_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Tárgyidőszakban visszaigényelt (levont) adó</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120189_Type">
+      <annotation>
+         <documentation>Fizetendő vagy visszaigényelhető adó</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120190"
+                  type="tns:FieldGroup_BEV_J01_120190_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Fizetendő vagy visszaigényelhető adó</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120100_Type">
+      <annotation>
+         <documentation>Átvezetési és/vagy részleges kiutalási kérelem</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120104"
+                  type="tns:Chain_BEV_J01_120104_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Átvezetési és/vagy részleges kiutalási kérelem</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120127_Type">
+      <annotation>
+         <documentation>Adóbevallást igazoló okmány adatok</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120129"
+                  type="tns:Chain_BEV_J01_120129_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Adóbevallást igazoló okmány adatok</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_BEV_J01_120195_Type">
+      <annotation>
+         <documentation>Önellenőrzés</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120178"
+                  type="tns:FieldGroup_BEV_J01_120178_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Önellenőrzéssel feltárt, megfizetett adó</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Chain_BEV_J01_120017_Type">
+      <annotation>
+         <documentation>Tárgyidőszakban megállapított adó</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_header" minOccurs="0">
+            <annotation>
+               <documentation>Lánc nem ismétlődő elemei (felületen előtte vagy utána jelennek meg)</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120051"
+                           type="tns:FieldGroup_BEV_J01_120051_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Egyedi</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="33">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120018"
+                           type="tns:FieldGroup_BEV_J01_120018_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Tárgyidőszakban megállapított adó</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Chain_BEV_J01_120054_Type">
+      <annotation>
+         <documentation>Tárgyidőszakban visszaigényelt (levont) adó</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_header" minOccurs="0">
+            <annotation>
+               <documentation>Lánc nem ismétlődő elemei (felületen előtte vagy utána jelennek meg)</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120185"
+                           type="tns:FieldGroup_BEV_J01_120185_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Egyedi</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="33">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120055"
+                           type="tns:FieldGroup_BEV_J01_120055_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Tárgyidőszakban visszaigényelt (levont) adó</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Chain_BEV_J01_120104_Type">
+      <annotation>
+         <documentation>Átvezetési és/vagy részleges kiutalási kérelem</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_header" minOccurs="0">
+            <annotation>
+               <documentation>Lánc nem ismétlődő elemei (felületen előtte vagy utána jelennek meg)</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120113"
+                           type="tns:FieldGroup_BEV_J01_120113_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Egyedi</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="5">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120105"
+                           type="tns:FieldGroup_BEV_J01_120105_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Átvezetési és/vagy részleges kiutalási kérelem</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Chain_BEV_J01_120129_Type">
+      <annotation>
+         <documentation>Adóbevallást igazoló okmány adatok</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="2178">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120130"
+                           type="tns:FieldGroup_BEV_J01_120130_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Adóbevallást igazoló okmány adatok</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120199_Type">
+      <annotation>
+         <documentation>Kötelező adatok</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001E0001SA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adózó azonosítói ¦ Adózó neve ([dohadobev]S1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="70"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E0001LA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adózó azonosítói ¦ Adózó adószáma (adószám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adózó azonosítói ¦ Engedélyszám/Nyilvántartási szám (ENGSZ)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="8"/>
+                  <pattern value="[A-Z0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E0001JA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ irányítószám (székhely_irányítószám)</documentation>
+            </annotation>
+            <simpleType>
+               <union memberTypes="enm1:altalanos_iranyitoszam_2">
+                  <simpleType>
+                     <restriction base="string">
+                        <minLength value="1"/>
+                        <maxLength value="4"/>
+                        <pattern value="[0-9]+"/>
+                     </restriction>
+                  </simpleType>
+               </union>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E0001TA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ város/község (székhely_helység)</documentation>
+            </annotation>
+            <simpleType>
+               <union memberTypes="enm1:altalanos_iranyitoszam_1">
+                  <simpleType>
+                     <restriction base="string">
+                        <minLength value="1"/>
+                        <maxLength value="30"/>
+                        <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+                     </restriction>
+                  </simpleType>
+               </union>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E537A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ közterület neve (székhely_közterület_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="41"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E0001UA"
+                  minOccurs="0"
+                  type="tns:Enum_BEV_J01_0A0001E0001UA"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ közterület jellege (székhely_közterület_jellege)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001E0001VA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ házszám (székhely_házszám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E538A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ épület (székhely_épület)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="6"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E539A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ lépcsőház (székhely_lépcsőház)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="6"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E0001WA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ emelet (székhely_emelet)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E540A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Székhely/telephely/fióktelep/lakcím ¦ ajtó (székhely_ajtó)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001F526A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallási időszak ¦ Bevallási időszak kezdete (bev_időszak_kezdete)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001F527A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallási időszak ¦ Bevallási időszak vége (bev_időszak_vége)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120005_Type">
+      <annotation>
+         <documentation>Ügyintéző adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001E535A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Ügyintéző neve (ugyintezo_nev)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001E536A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Ügyintéző telefonszáma (ugyintezo_tel)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120008_Type">
+      <annotation>
+         <documentation>Bevallás azonosítása</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001F500A"
+                  minOccurs="0"
+                  type="tns:Enum_BEV_J01_0A0001F500A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallás jellege (jelleg)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001F522A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hiánypótlás (HIANYPOTLAS)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001F00500A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hivatkozott ügyszám (Hivatkozott_ügyszám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001F516A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Csatolt okmányok száma (OKMDB)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="3"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120012_Type">
+      <annotation>
+         <documentation>Belföldi pénzforgalmi vagy fizetési számlaszám</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001G50017A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adózó belföldi pénzforgalmi vagy fizetési számlaszáma (belföldi_pénzforg_jelzőszám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="8"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001G518A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>(belföldi_alszámlaszám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="16"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001G519A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számlavezető pénzforgalmi szolgáltató neve (PNEV)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120013_Type">
+      <annotation>
+         <documentation>Jövedéki adóval kapcsolatos nyilatkozatok</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001G512A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Visszaigényelhető jövedéki adó jelölése (VISSZAIG)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001H50021A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adókötelezettségem nem keletkezett ([dohadobev]Z1)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120014_Type">
+      <annotation>
+         <documentation>Kiutalással kapcsolatos nyilatkozatok</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001G513A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Teljes összeg kiutalása kérésének jelölése (KIUTAL)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001G514A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kiutalást nem kér jelölése (KIUTAL2)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001G515A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Átvezetési és/vagy részleges kiutalási kérelem (ATVKER)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120190_Type">
+      <annotation>
+         <documentation>Fizetendő vagy visszaigényelhető adó</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0D0001B002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Nettó adófizetési kötelezettség ¦ Jövedéki adó (ezer Ft) ([EF]I69)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Nettó adófizetési kötelezettség ¦ Általános forgalmi adó (ezer Ft) ([EF]J69)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Adóvisszaigénylési jogosultság ¦ Jövedéki adó (ezer Ft) ([EF]I70)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Adóvisszaigénylési jogosultság ¦ Általános forgalmi adó (ezer Ft) ([EF]J70)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B008A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adójeggyel rendezett adó ¦ Jövedéki adó (ezer Ft) ([EF]I71)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B009A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adójeggyel rendezett adó ¦ Általános forgalmi adó (ezer Ft) ([EF]J71)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B011A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Fizetendő adó ¦ Jövedéki adó (ezer Ft) ([EF]I72)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B012A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Fizetendő adó ¦ Általános forgalmi adó (ezer Ft) ([EF]J72)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B014A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Visszaigényelhető adó ¦ Jövedéki adó (ezer Ft) ([EF]I73)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B015A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Visszaigényelhető adó ¦ Általános forgalmi adó (ezer Ft) ([EF]J73)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120178_Type">
+      <annotation>
+         <documentation>Önellenőrzéssel feltárt, megfizetett adó</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0D0001B017A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Önellenőrzéssel feltárt, megfizetett adó ¦ Jövedéki adó (ezer Ft) ([EF]I74)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B018A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Önellenőrzéssel feltárt, megfizetett adó ¦ Általános forgalmi adó (ezer Ft) ([EF]J74)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001B020A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Önellenőrzési pótlék ¦ (ezer Ft) ([EF]J75)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120018_Type">
+      <annotation>
+         <documentation>Tárgyidőszakban megállapított adó</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0B0001B001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Fajtakód ([C]A1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="3"/>
+                  <pattern value="[A-Z0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0B0001B002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jövedéki adó (ezer Ft) ([C]B1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0B0001B003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Általános forgalmi adó (ezer Ft) ([C]C1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120051_Type">
+      <annotation>
+         <documentation>Egyedi</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0B0001B100A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Összesen: ¦ Jövedéki adó (ezer Ft) ([C]B34)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0B0001B101A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Összesen: ¦ Általános forgalmi adó (ezer Ft) ([C]C34)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120055_Type">
+      <annotation>
+         <documentation>Tárgyidőszakban visszaigényelt (levont) adó</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0C0001B001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Fajtakód ([D]D35)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="3"/>
+                  <pattern value="[A-Z0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0C0001B002A"
+                  minOccurs="0"
+                  type="tns:Enum_BEV_J01_0C0001B006A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Visszaigénylési kód ([D]E35)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0C0001B003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jövedéki adó (ezer Ft) ([D]F35)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0C0001B004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Általános forgalmi adó (ezer Ft) ([D]G35)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120185_Type">
+      <annotation>
+         <documentation>Egyedi</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0C0001B133A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Összesen: ¦ Jövedéki adó (ezer Ft) ([D]F68)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0C0001B134A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Összesen: ¦ Általános forgalmi adó (ezer Ft) ([D]G68)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120105_Type">
+      <annotation>
+         <documentation>Átvezetési és/vagy részleges kiutalási kérelem</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0D0001C001A"
+                  minOccurs="0"
+                  type="tns:Enum_BEV_J01_0D0001C001A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Terhelendő adó ¦ számlaszáma ([EF]K76)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0D0001C002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Terhelendő adó ¦ összege (Ft) ([EF]L76)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="13"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001C003A"
+                  minOccurs="0"
+                  type="enm3:altalanos_adonemkod_2"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jóváírandó adó ¦ számlaszáma ([EF]M76)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0D0001C545A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jóváírandó adó ¦ határozatszáma ([EF]N76)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="14"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001C004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jóváírandó adó ¦ összege (Ft) ([EF]O76)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="13"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001C005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Részleges kiutalásra kért összeg (Ft) ([EF]P76)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="13"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120113_Type">
+      <annotation>
+         <documentation>Egyedi</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0D0001C026A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Összesen: ¦ Terhelendő adó ¦ összege (Ft) ([EF]L81)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="14"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001C027A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Összesen: ¦ Jóváírandó adó ¦ összege (Ft) ([EF]O81)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="14"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0D0001C028A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Részleges kiutalásra kért összeg (Ft) ([EF]P81)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="14"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_BEV_J01_120130_Type">
+      <annotation>
+         <documentation>Adóbevallást igazoló okmány adatok</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0EXXXXB001A"
+                  minOccurs="0"
+                  type="tns:Enum_BEV_J01_0EXXXXB001A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Okmány típusa ([P5]A1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0EXXXXB002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Okmány száma ([P5]B1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0EXXXXB003A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Okmány kelte ([P5]C1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0EXXXXB004A"
+                  minOccurs="0"
+                  type="tns:Enum_BEV_J01_egyseges_orszagkodok_1"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Országkód ([P5]D1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0EXXXXB005A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A termék átvételének kelte ([P5]E1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0EXXXXB006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Megfizetést vagy biztosítást igazoló okmány száma ([P5]F1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0EXXXXB007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kiállító szerv ([P5]G1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="70"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+</schema>
